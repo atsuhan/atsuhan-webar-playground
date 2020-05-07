@@ -64,6 +64,7 @@ module.exports = {
     'prettier/prettier': ['error', { arrowParens: 'always', printWidth: 120 }],
     'jsx-a11y/href-no-hash': 'off',
     'jsx-a11y/anchor-is-valid': ['warn', { aspects: ['invalidHref'] }],
+    'jsx-a11y/media-has-caption': 0,
     'no-shadow': 0,
     'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
   },

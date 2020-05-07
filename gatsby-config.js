@@ -61,5 +61,8 @@ module.exports = {
         googleAnalyticsTrackingId: ``,
       },
     },
+
+    // glsl
+    `gatsby-plugin-glslify`,
   ],
 };
