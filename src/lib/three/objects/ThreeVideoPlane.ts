@@ -22,10 +22,10 @@ export default class ThreeVideoPlane extends ThreeObjectBase {
     this.config = config ? _.assign(CONFIG_DEFAULT, config) : CONFIG_DEFAULT;
   }
 
-  init() {
+  async init() {
     const geometory: any = new THREE.PlaneGeometry();
 
-    const texture: any = new THREE.VideoTexture(this.config.videoEl);
+    const texture: any = await new THREE.VideoTexture(this.config.videoEl);
     texture.minFilter = THREE.LinearFilter;
     texture.magFilter = THREE.LinearFilter;
     texture.format = THREE.RGBFormat;
@@ -49,7 +49,7 @@ export default class ThreeVideoPlane extends ThreeObjectBase {
     this.obj.receiveShadow = this.config.receiveShadow;
   }
 
-  setScaleVideoAspect(widthScale: number) {
+  setScaleAspect(widthScale: number) {
     const aspectRatio = this.config.videoEl.videoHeight / this.config.videoEl.videoWidth;
     const scaleVec = new THREE.Vector3(widthScale, widthScale * aspectRatio, 1);
     this.obj.scale.copy(scaleVec);

@@ -34,6 +34,10 @@ export default class ThreeObjectBase {
     this.obj.rotateOnAxis(axis, angle);
   }
 
+  lookAtAxisY(target: any) {
+    this.obj.rotation.y = Math.atan2(target.position.x - this.obj.position.x, target.position.z - this.obj.position.z);
+  }
+
   setScale(val: any) {
     if (typeof val === `number`) {
       this.obj.scale.setScalar(val);
