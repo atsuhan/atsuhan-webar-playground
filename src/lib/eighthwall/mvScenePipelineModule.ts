@@ -34,7 +34,7 @@ const onStart = async () => {
     texPath: `/img/webar/mv/01_FILL.png`,
   });
   await threeLyricTex.init();
-  threeLyricTex.obj.scale.set(1, 0.08);
+  threeLyricTex.obj.scale.set(1.2, 0.1, 1);
   //threeLyricTex.setScaleAspect(1.2);
 
   // touchevent
