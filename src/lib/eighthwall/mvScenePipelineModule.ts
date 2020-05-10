@@ -3,6 +3,7 @@ import ThreeAmbientLight from '../three/objects/ThreeAmbientLight';
 import ThreeGround from 'src/lib/three/objects/ThreeGround';
 import ThreeRaycaster from '../three/utils/ThreeRaycaster';
 import ThreeUnlitTexture from '../three/objects/ThreeUnlitTexture';
+import ThreeDecoration from 'src/lib/three/objects/pages/webar/ThreeDecoration';
 import ThreeVideoPlane from 'src/lib/three/objects/ThreeVideoPlane';
 import XrThreeBase from 'src/lib/eighthwall/XrThreeBase';
 
@@ -52,7 +53,7 @@ const onStart = async () => {
   // decorations
   await Promise.all(
     _.map(DECORATION_PATHES, async (path) => {
-      const decoration = new ThreeUnlitTexture({
+      const decoration = new ThreeDecoration({
         texPath: path,
       });
       await decoration.init();
