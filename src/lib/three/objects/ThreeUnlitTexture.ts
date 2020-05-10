@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import ThreeObjectBase from './base/ThreeObjectBase';
+import ThreeObjectBase from './ThreeObjectBase';
 
 const CONFIG_DEFAULT = {
   texPath: `/img/logo.jpg`,
@@ -33,9 +33,6 @@ export default class ThreeUnlitTexture extends ThreeObjectBase {
   }
 
   setScaleAspect(widthScale: number) {
-    console.log(this.texture.image);
-    console.log(this.texture.image.width);
-
     const aspectRatio = this.texture.image.height / this.texture.image.width;
     const scaleVec = new THREE.Vector3(widthScale, widthScale * aspectRatio, 1);
     this.obj.scale.copy(scaleVec);

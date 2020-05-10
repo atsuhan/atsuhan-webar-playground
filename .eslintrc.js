@@ -15,6 +15,9 @@ module.exports = {
   },
   env: { browser: true, node: true, es6: true },
   rules: {
+    'no-undef': 0,
+    'no-plusplus': 0,
+    'no-empty-function': 0,
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     '@typescript-eslint/no-unused-vars': [1, { argsIgnorePattern: 'res|next|stage|^err|on|config|e|_' }],
