@@ -1,14 +1,10 @@
-/**
- * ビデオ板
- */
-
 import _ from 'lodash';
 import vertexShader from 'src/shaders/chromakey/chromakey.vert';
 import fragmentShader from 'src/shaders/chromakey/chromakey.frag';
 import ThreeObjectBase from './base/ThreeObjectBase';
 
 const CONFIG_DEFAULT = {
-  videoEl: document.querySelector(`video`),
+  videoElClassName: `video`,
   transparent: true,
   receiveShadow: true,
   difference: 0.7,
@@ -16,6 +12,7 @@ const CONFIG_DEFAULT = {
 
 export default class ThreeVideoPlane extends ThreeObjectBase {
   config: any;
+  elm: any;
 
   constructor(config: any = null) {
     super();
@@ -25,7 +22,8 @@ export default class ThreeVideoPlane extends ThreeObjectBase {
   async init() {
     const geometory: any = new THREE.PlaneGeometry();
 
-    const texture: any = await new THREE.VideoTexture(this.config.videoEl);
+    this.elm = document.querySelector(this.config.videoElClassName);
+    const texture: any = await new THREE.VideoTexture(this.elm);
     texture.minFilter = THREE.LinearFilter;
     texture.magFilter = THREE.LinearFilter;
     texture.format = THREE.RGBFormat;
@@ -50,8 +48,12 @@ export default class ThreeVideoPlane extends ThreeObjectBase {
   }
 
   setScaleAspect(widthScale: number) {
-    const aspectRatio = this.config.videoEl.videoHeight / this.config.videoEl.videoWidth;
+    const aspectRatio = this.elm.videoHeight / this.elm.videoWidth;
     const scaleVec = new THREE.Vector3(widthScale, widthScale * aspectRatio, 1);
     this.obj.scale.copy(scaleVec);
+  }
+
+  play() {
+    this.elm.play();
   }
 }

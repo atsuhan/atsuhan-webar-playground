@@ -12,7 +12,6 @@ let threeBase: XrThreeBase;
 let threeGround: ThreeGround;
 let threeVideoPlane: ThreeVideoPlane;
 let threeLyricTex: ThreeUnlitTexture;
-let videoEl: any;
 
 const onStart = async () => {
   threeBase = new XrThreeBase();
@@ -22,9 +21,8 @@ const onStart = async () => {
   threeGround.addTo(threeBase.scene);
 
   // Video
-  videoEl = document.querySelector(VIDEO_ELM_CLASSNAME);
   threeVideoPlane = new ThreeVideoPlane({
-    videoEl,
+    videoElClassName: VIDEO_ELM_CLASSNAME,
   });
   await threeVideoPlane.init();
   threeVideoPlane.setScaleAspect(1.0);
@@ -45,7 +43,7 @@ const onStart = async () => {
     threeVideoPlane.lookAtAxisY(threeBase.camera);
 
     if (!threeVideoPlane.parent) {
-      videoEl.play();
+      threeVideoPlane.play();
       threeVideoPlane.addTo(threeBase.scene);
 
       threeLyricTex.addTo(threeVideoPlane.obj);
