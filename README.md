@@ -1,4 +1,4 @@
-# gatsby-8thwall-template
+# atsuhan-webar-playground
 
 8thWall template with Gatsby(react) and TypeScript.
 
@@ -13,10 +13,7 @@
 
 1. Change API key to yours
 
-Remove `.sample` from follow file.
-`/src/data/keys.json.sample`
-
-Change API key.
+Change API key in `/src/data/keys.json`
 
 ```
 {
@@ -35,9 +32,3 @@ $ yarn
 ```
 $ yarn start
 ```
-
-## Base template
-
-This template was created based on the following repository. I really appreciate it.
-
-[hppRC/gatsby-starter-hpp](https://github.com/hppRC/gatsby-starter-hpp)
