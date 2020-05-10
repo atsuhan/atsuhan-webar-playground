@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import vertexShader from 'src/shaders/chromakey/chromakey.vert';
 import fragmentShader from 'src/shaders/chromakey/chromakey.frag';
-import ThreeObjectBase from './base/ThreeObjectBase';
+import ThreeObjectBase from './ThreeObjectBase';
 
 const CONFIG_DEFAULT = {
   videoElClassName: `video`,

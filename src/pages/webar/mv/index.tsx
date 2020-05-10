@@ -27,6 +27,7 @@ const Component: React.FCX = () => (
         loop
         crossOrigin='anonymous'
         css={VIDEO_STYLE}
+        muted
       />
     </div>
   </div>

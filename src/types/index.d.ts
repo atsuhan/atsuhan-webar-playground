@@ -6,6 +6,6 @@ declare module 'react' {
   type FCX<P = {}> = React.FunctionComponent<P & { className?: string }>;
 }
 
-declare module '@tweenjs/tween.js' {
-  export = TWEEN;
+declare module 'gsap' {
+  export = TweenMax;
 }
