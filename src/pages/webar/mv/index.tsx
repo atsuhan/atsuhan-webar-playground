@@ -27,7 +27,6 @@ const Component: React.FCX = () => (
         loop
         crossOrigin='anonymous'
         css={VIDEO_STYLE}
-        muted
       />
     </div>
   </div>
@@ -35,7 +34,7 @@ const Component: React.FCX = () => (
 
 export default ({ path }: { path: string }) => (
   <>
-    <SEO title='WebAR-Top' pathname={path} />
+    <SEO title='WebAR-MV' pathname={path} />
     <Component />
   </>
 );
