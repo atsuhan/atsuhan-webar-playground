@@ -21,19 +21,19 @@ export default class ThreeUnlitTexture extends ThreeObjectBase {
 
     this.texture = await new THREE.TextureLoader().load(this.config.texPath);
 
-    const material = new THREE.MeshBasicMaterial({
+    const material = await new THREE.MeshBasicMaterial({
       map: this.texture,
       transparent: this.config.isTransparent,
       DoubleSide: THREE.DoubleSide,
       receiveShadow: this.config.isReceiveShadow,
     });
 
-    this.obj = new THREE.Mesh(geometory, material);
+    this.obj = await new THREE.Mesh(geometory, material);
     this.obj.receiveShadow = this.config.receiveShadow;
   }
 
   setScaleAspect(widthScale: number) {
-    console.log(this.texture.image.height);
+    console.log(this.texture.image);
     console.log(this.texture.image.width);
 
     const aspectRatio = this.texture.image.height / this.texture.image.width;

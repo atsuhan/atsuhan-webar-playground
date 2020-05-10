@@ -48,18 +48,15 @@ const onStart = async () => {
     texPath: `/img/webar/mv/lyrics/01_FILL.png`,
   });
   await threeLyricTex.init();
-  threeLyricTex.obj.scale.set(1.2, 0.1, 1);
-  //threeLyricTex.setScaleAspect(1.2);
 
   // decorations
   await Promise.all(
     _.map(DECORATION_PATHES, async (path) => {
-      const texPlane = new ThreeUnlitTexture({
+      const decoration = new ThreeUnlitTexture({
         texPath: path,
       });
-      await texPlane.init();
-      texPlane.obj.scale.set(0.5, 0.5, 1);
-      threeDecorations.push(texPlane);
+      await decoration.init();
+      threeDecorations.push(decoration);
     })
   );
 
@@ -76,12 +73,14 @@ const onStart = async () => {
 
       // lyric
       threeLyricTex.addTo(threeVideoPlane.obj);
-      threeLyricTex.move(new THREE.Vector3(0, -0.5, 0.5));
+      threeLyricTex.move(new THREE.Vector3(0, -0.5, 0.2));
+      threeLyricTex.setScaleAspect(1.2);
 
       // decoration
-      _.forEach(threeDecorations, (deco) => {
-        deco.addTo(threeVideoPlane.obj);
-        deco.move(new THREE.Vector3(_.random(-1, 1, true), _.random(0.2, 1, true), _.random(-1, 1, true)));
+      _.forEach(threeDecorations, (decoration) => {
+        decoration.addTo(threeVideoPlane.obj);
+        decoration.setScaleAspect(_.random(0.1, 0.2, true));
+        decoration.move(new THREE.Vector3(_.random(-1, 1, true), _.random(0.2, 1, true), _.random(-1, 1, true)));
       });
     }
 
@@ -94,13 +93,8 @@ const onStart = async () => {
   });
 };
 
-const onUpdate = () => {
-  console.log(`onUpdate`);
-};
-
 const mvScenePipelineModule = () => ({
   name: `MV`,
   onStart,
-  onUpdate,
 });
 export default mvScenePipelineModule;
