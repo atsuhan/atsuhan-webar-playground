@@ -7,7 +7,7 @@ import keys from 'src/data/keys.json';
 import 'src/styles/static-global-webar.scss';
 import ScriptTag from 'src/components/ScriptTag';
 import EighthWallApp from 'src/components/eighthwall/EighthWallApp';
-import mvScenePipelineModule from 'src/lib/eighthwall/mvScenePipelineModule';
+import mvScenePipelineModule from 'src/lib/pipelines/mvScenePipelineModule';
 import { css } from '@emotion/core';
 
 const VIDEO_STYLE = css({

@@ -34,6 +34,10 @@ export default class ThreeObjectBase {
     this.obj.rotateOnAxis(axis, angle);
   }
 
+  lookAt(vec3: any) {
+    this.obj.lookAt(vec3);
+  }
+
   lookAtAxisY(target: any) {
     this.obj.rotation.y = Math.atan2(target.position.x - this.obj.position.x, target.position.z - this.obj.position.z);
   }
