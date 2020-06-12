@@ -4,7 +4,7 @@ import ThreeRaycaster from '../three/utils/ThreeRaycaster';
 import ThreeGround from '../three/objects/ThreeGround';
 import ThreeModel from '../three/objects/ThreeModel';
 
-const modelPath = `/models/foods/roastedbeef.glb`;
+const modelPath = `https://dl.dropbox.com/s/7p111ixvp8moaqi/roastedbeef.glb`;
 let threeModelRoastedBeef: ThreeModel;
 let threeAmbientLight: ThreeAmbientLight;
 let threeDirectionalLight: ThreeDirectionalLight;
