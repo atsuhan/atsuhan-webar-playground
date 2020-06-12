@@ -3,17 +3,17 @@
  */
 
 import _ from 'lodash';
-import ThreeObjectBase from 'src/lib/three/objects/ThreeObjectBase';
+import ThreeObjectBase from 'src/lib/three/objects/base/ThreeObjectBase';
 
 const CONFIG_DEFAULT: any = {
   color: 0xffffff,
-  force: 1,
+  force: 0.5,
 };
 
 export default class ThreeAmbientLight extends ThreeObjectBase {
   config: any;
 
-  constructor(config = null) {
+  constructor(config: any = null) {
     super();
     this.config = config ? _.assign(CONFIG_DEFAULT, config) : CONFIG_DEFAULT;
     this.init();

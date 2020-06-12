@@ -3,14 +3,14 @@
  */
 
 import _ from 'lodash';
-import ThreeObjectBase from './ThreeObjectBase';
+import ThreeObjectBase from './base/ThreeObjectBase';
 
 const CONFIG_DEFAULT = {
   color: 0xffffff,
   transparent: true,
   opacity: 0,
   scale: 100,
-  receiveShadow: true,
+  isReceiveShadow: true,
 };
 
 export default class ThreeGround extends ThreeObjectBase {
@@ -30,7 +30,7 @@ export default class ThreeGround extends ThreeObjectBase {
       transparent: this.config.transparent,
     });
     this.obj = new THREE.Mesh(new THREE.PlaneGeometry(), this.material);
-    this.obj.receiveShadow = this.config.receiveShadow;
+    this.obj.receiveShadow = this.config.isReceiveShadow;
     this.obj.rotateX(-Math.PI / 2);
     this.setScale(this.config.scale);
   }

@@ -4,13 +4,9 @@ export default class XrThreeBase {
   camera: any;
 
   constructor() {
-    this.init();
-  }
-
-  init() {
-    this.initRenderer();
     this.initScene();
     this.initCamera();
+    this.initRenderer();
   }
 
   initRenderer() {

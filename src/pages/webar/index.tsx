@@ -7,7 +7,7 @@ import keys from 'src/data/keys.json';
 import 'src/styles/static-global-webar.scss';
 import ScriptTag from 'src/components/ScriptTag';
 import EighthWallApp from 'src/components/eighthwall/EighthWallApp';
-import simpleBoxScenePipelineModule from 'src/lib/eighthwall/simpleBoxScenePipelineModule';
+import simpleBoxScenePipelineModule from 'src/lib/pipelines/simpleBoxScenePipelineModule';
 
 const Component: React.FCX = () => (
   <div className='eighthwall-container'>

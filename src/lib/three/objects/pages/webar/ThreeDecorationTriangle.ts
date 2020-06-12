@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import ThreeObjectBase from '../../ThreeObjectBase';
+import ThreeObjectBase from '../../base/ThreeObjectBase';
 import ThreeUnlitTexture from '../../ThreeUnlitTexture';
 import { TweenMax, TimelineMax, Power2 } from 'gsap';
 
