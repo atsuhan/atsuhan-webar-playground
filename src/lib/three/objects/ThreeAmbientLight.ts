@@ -7,7 +7,7 @@ import ThreeObjectBase from 'src/lib/three/objects/base/ThreeObjectBase';
 
 const CONFIG_DEFAULT: any = {
   color: 0xffffff,
-  force: 1,
+  force: 0.5,
 };
 
 export default class ThreeAmbientLight extends ThreeObjectBase {

@@ -24,10 +24,8 @@ export default class ThreeDirectionalLight extends ThreeObjectBase {
 
   init() {
     this.obj = new THREE.DirectionalLight(this.config.color, this.config.force);
-
-    this.obj.position.set(0, 0, 100);
-    this.obj.castShadow = this.config.isCastShadow;
     this.obj.shadow.mapSize.width = this.config.shadowMapWidth;
     this.obj.shadow.mapSize.height = this.config.shadowMapHeight;
+    this.obj.castShadow = this.config.isCastShadow;
   }
 }

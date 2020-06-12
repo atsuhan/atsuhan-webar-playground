@@ -4,6 +4,7 @@ import ThreeObjectBase from './base/ThreeObjectBase';
 const CONFIG_DEFAULT = {
   modelPath: `/models/sample.glb`,
   isReceiveShadow: true,
+  isCastShadow: true,
 };
 
 const loadGltf = (url: string) =>
@@ -28,7 +29,6 @@ export default class ThreeModel extends ThreeObjectBase {
     this.objs = this.model.scene.children;
     this.obj = _.head(this.objs);
     this.obj.receiveShadow = this.config.isReceiveShadow;
-
-    console.log(this.obj);
+    this.obj.castShadow = this.config.isCastShadow;
   }
 }

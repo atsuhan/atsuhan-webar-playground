@@ -21,6 +21,7 @@ const roastedBeefModule = () => ({
   onStart: () => {
     const { scene, camera, renderer } = XR8.Threejs.xrScene();
     renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
     // Ambient Light
     threeAmbientLight = new ThreeAmbientLight({
@@ -33,7 +34,8 @@ const roastedBeefModule = () => ({
       force: 2,
     });
     threeDirectionalLight.addTo(scene);
-    threeDirectionalLight.rotateOnAxis(new THREE.Vector3(1, 0, 0), 20);
+    threeDirectionalLight.move([0, 10, -10]);
+    threeDirectionalLight.lookAt(new THREE.Vector3(0, 0, 0));
 
     threeGround = new ThreeGround();
     threeGround.addTo(scene);
