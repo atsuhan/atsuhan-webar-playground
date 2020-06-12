@@ -3,7 +3,7 @@
  */
 
 import _ from 'lodash';
-import ThreeObjectBase from './ThreeObjectBase';
+import ThreeObjectBase from './base/ThreeObjectBase';
 
 const CONFIG_DEFAULT = {
   color: 0xffffff,
