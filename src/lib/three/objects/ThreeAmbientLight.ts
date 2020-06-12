@@ -13,7 +13,7 @@ const CONFIG_DEFAULT: any = {
 export default class ThreeAmbientLight extends ThreeObjectBase {
   config: any;
 
-  constructor(config = null) {
+  constructor(config: any = null) {
     super();
     this.config = config ? _.assign(CONFIG_DEFAULT, config) : CONFIG_DEFAULT;
     this.init();

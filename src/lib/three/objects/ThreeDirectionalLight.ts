@@ -8,12 +8,15 @@ import ThreeObjectBase from 'src/lib/three/objects/base/ThreeObjectBase';
 const CONFIG_DEFAULT: any = {
   color: 0xffffff,
   force: 1,
+  isCastShadow: true,
+  shadowMapWidth: 2048,
+  shadowMapHeight: 2048,
 };
 
 export default class ThreeDirectionalLight extends ThreeObjectBase {
   config: any;
 
-  constructor(config = null) {
+  constructor(config: any) {
     super();
     this.config = config ? _.assign(CONFIG_DEFAULT, config) : CONFIG_DEFAULT;
     this.init();
@@ -21,5 +24,10 @@ export default class ThreeDirectionalLight extends ThreeObjectBase {
 
   init() {
     this.obj = new THREE.DirectionalLight(this.config.color, this.config.force);
+
+    this.obj.position.set(0, 0, 100);
+    this.obj.castShadow = this.config.isCastShadow;
+    this.obj.shadow.mapSize.width = this.config.shadowMapWidth;
+    this.obj.shadow.mapSize.height = this.config.shadowMapHeight;
   }
 }
