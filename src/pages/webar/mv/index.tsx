@@ -34,7 +34,7 @@ const Component: React.FCX = () => (
 
 export default ({ path }: { path: string }) => (
   <>
-    <SEO title='WebAR-Top' pathname={path} />
+    <SEO title='WebAR-MV' pathname={path} />
     <Component />
   </>
 );

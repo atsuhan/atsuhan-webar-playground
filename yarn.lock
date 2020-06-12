@@ -1593,6 +1593,11 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
+"@tweenjs/tween.js@^18.5.0":
+  version "18.5.0"
+  resolved "https://registry.yarnpkg.com/@tweenjs/tween.js/-/tween.js-18.5.0.tgz#f2aa9e6052c6a314d85c9a8034146f9ae6d4e339"
+  integrity sha512-/qyhdvbc6vWsFuiK7Wq74ZMu1F/9sFRlBv2qnjeu70XI0HRC8zOfUqbXT2irVLCSVuCI/fI7HphGdbsbyQ/Q5w==
+
 "@types/color-name@^1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
@@ -1640,6 +1645,11 @@
     "@types/events" "*"
     "@types/minimatch" "*"
     "@types/node" "*"
+
+"@types/gsap@^1.20.2":
+  version "1.20.2"
+  resolved "https://registry.yarnpkg.com/@types/gsap/-/gsap-1.20.2.tgz#038d0e81a8dd50b9b6894f34f3cd4045f71c62b8"
+  integrity sha512-i9nUsnS32+VTgoX5IlaCYukJpCoB3c6h3bZvO67aIRdb3z8NFTWgeUDpQutLyb1ujowp6nw37qLQNvEowqq8yw==
 
 "@types/history@*":
   version "4.7.5"
@@ -1770,6 +1780,11 @@
   version "0.0.33"
   resolved "https://registry.yarnpkg.com/@types/tmp/-/tmp-0.0.33.tgz#1073c4bc824754ae3d10cfab88ab0237ba964e4d"
   integrity sha1-EHPEvIJHVK49EM+riKsCN7qWTk0=
+
+"@types/tween.js@^18.5.0":
+  version "18.5.0"
+  resolved "https://registry.yarnpkg.com/@types/tween.js/-/tween.js-18.5.0.tgz#27d10aafa36c75c72953f00936663546b2a28441"
+  integrity sha512-jx8DQOAYj9XOaa0sf0Ixy0bYhx3qFozyDiZnF8Mtfio6Uf9NJt/+RkuYHFmQ4DtHFty+wtVfN08jWJeYAfwcpA==
 
 "@types/unist@*", "@types/unist@^2.0.0", "@types/unist@^2.0.2":
   version "2.0.3"
@@ -7615,6 +7630,11 @@ gray-matter@^4.0.2:
     kind-of "^6.0.2"
     section-matter "^1.0.0"
     strip-bom-string "^1.0.0"
+
+gsap@^3.2.6:
+  version "3.2.6"
+  resolved "https://registry.yarnpkg.com/gsap/-/gsap-3.2.6.tgz#fbaddab30c8c2fb029d61ef56f667b42f99c932f"
+  integrity sha512-QX7WQWZUAooS9tOCYg4kKLcnjBreA4Xyu11EVx6zp4BbKijnMK+NtzkB47las/E0luFE84hGscOZm5vd13KzZA==
 
 gud@^1.0.0:
   version "1.0.0"
